@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./CityForm.css";
-import "./Weather";
 
 export default function CityForm() {
   let [city, setCity] = useState(`Schaffhausen`);
@@ -18,14 +17,52 @@ export default function CityForm() {
     }
   }
   function setWeather(response) {
-    let weatherData = {
-      temperature: Math.round(response.data.main.temp),
-      description: response.data.weather[0].description,
-      imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-      humidity: response.data.main.humidity,
-      wind: 10,
-    };
-    return setWeatherData(weatherData);
+    setWeatherData(
+      <div className="row Weather">
+        <div className="col-2">
+          <img
+            src={weatherData.imgUrl}
+            className="weather-icon-main"
+            alt={weatherData.description}
+          />
+        </div>
+        <div className="col-1">
+          <h1 className="temp-main">{Math.round(response.data.main.temp)} </h1>
+        </div>
+        <div className="col-2">
+          <span className="degree-views">
+            <a href="/" className="celsius active">
+              °C
+            </a>
+            |
+            <a href="/" className="fahrenheit">
+              °F
+            </a>
+          </span>
+        </div>
+        <div className="col-4">
+          <ul className="humidity-wind">
+            <li>Humidity {response.data.main.humidity} %</li>
+            <li>Wind {Math.round(response.data.wind.speed * 3.6)} km/h</li>
+          </ul>
+        </div>
+        <div className="col-3">
+          <ul className="sunrise-sunset">
+            <li>
+              Sunrise <small>sunrise</small>
+            </li>
+            <li>
+              Sunset <small>sunset</small>
+            </li>
+          </ul>
+        </div>
+        <div className="col-12">
+          <h6 className="precipitation-description">
+            {response.data.weather[0].description}
+          </h6>
+        </div>
+      </div>
+    );
   }
 
   function updateCity(event) {

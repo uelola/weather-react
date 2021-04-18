@@ -2,7 +2,6 @@ import "./App.css";
 import "./CityForm";
 import CityForm from "./CityForm";
 import DayAndTime from "./DayAndTime";
-import Weather from "./Weather";
 
 function App() {
   return (
@@ -11,11 +10,14 @@ function App() {
         <div className="weather-app">
           <CityForm />
           <DayAndTime />
-          <Weather />
         </div>
       </div>
       <small>
-        <a href="https://github.com/uelola/weather-react" target="_blank">
+        <a
+          href="https://github.com/uelola/weather-react"
+          rel="noreferrer"
+          target="_blank"
+        >
           Open-source code
         </a>
         , by Lola Ueda
