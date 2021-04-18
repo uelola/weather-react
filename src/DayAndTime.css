@@ -1,0 +1,8 @@
+.date,
+.time {
+  position: relative;
+  text-align: right;
+  font-weight: 300;
+  color: #1b1b1b;
+  margin-left: 0;
+}

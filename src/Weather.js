@@ -1,26 +1,52 @@
 import React from "react";
 import axios from "axios";
+import "./Weather.css";
+import "./CityForm";
 import Loader from "react-loader-spinner";
 
-export default function Weather(props) {
-  function handleResponse(response) {
-    alert(
-      `The weather in ${response.data.name} is ${Math.round(
-        response.data.main.temp
-      )}°C`
-    );
-  }
-  let apiKey = "45806222ea153dc5cbd693b6ea7eebaf";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(handleResponse);
+export default function Weather(weatherData) {
   return (
-    <Loader
-      type="Puff"
-      color="violet"
-      height={100}
-      width={100}
-      timeout={3000} //3 secs
-    />
+    <div className="row Weather">
+      <div className="col-2">
+        <img
+          src={weatherData.imgUrl}
+          className="weather-icon-main"
+          alt={weatherData.description}
+        />
+      </div>
+      <div className="col-1">
+        <h1 className="temp-main">{weatherData.temperature} </h1>
+      </div>
+      <div className="col-2">
+        <span className="degree-views">
+          <a href="/" className="celsius active">
+            °C
+          </a>
+          |
+          <a href="/" className="fahrenheit">
+            °F
+          </a>
+        </span>
+      </div>
+      <div className="col-4">
+        <ul className="humidity-wind">
+          <li>Humidity {weatherData.humidity} %</li>
+          <li>Wind {weatherData.wind} km/h</li>
+        </ul>
+      </div>
+      <div className="col-3">
+        <ul className="sunrise-sunset">
+          <li>
+            Sunrise <small>{weatherData.sunrise}</small>
+          </li>
+          <li>
+            Sunset <small>{weatherData.sunset}</small>
+          </li>
+        </ul>
+      </div>
+      <div className="col-12">
+        <h6 className="precipitation-description">{weatherData.description}</h6>
+      </div>
+    </div>
   );
 }
