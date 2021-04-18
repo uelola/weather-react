@@ -18,7 +18,7 @@ function App() {
         <a href="https://github.com/uelola/weather-react" target="_blank">
           Open-source code
         </a>
-        by Lola Ueda
+        , by Lola Ueda
       </small>
     </div>
   );
