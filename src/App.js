@@ -1,7 +1,11 @@
+import React from "react";
 import "./App.css";
+import "./index";
+
 import "./CityForm";
 import CityForm from "./CityForm";
 import DayAndTime from "./DayAndTime";
+import Weather from "./Weather";
 
 function App() {
   return (
@@ -10,6 +14,7 @@ function App() {
         <div className="weather-app">
           <CityForm />
           <DayAndTime />
+          <Weather />
         </div>
       </div>
       <small>
