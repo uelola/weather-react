@@ -3,22 +3,9 @@ import axios from "axios";
 import "./CityForm.css";
 
 export default function CityForm() {
-  let [city, setCity] = useState(`Schaffhausen`);
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    if (city.length > 0) {
-      setCity({ city });
-    } else {
-      setCity(`Schaffhausen`);
-    }
-  }
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
+  let city = `Schaffhausen`;
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div className="row">
         <div className="col-4 enter-a-city">
           <input
@@ -27,7 +14,6 @@ export default function CityForm() {
             placeholder="Enter a city"
             autoFocus="on"
             autoComplete="off"
-            onChange={updateCity}
           />
         </div>
         <div className="col-1">
