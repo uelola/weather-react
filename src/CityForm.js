@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 //import axios from "axios";
 import "./CityForm.css";
 
 export default function CityForm() {
-  let city = `Schaffhausen`;
+  let [city, setCity] = useState(`Schaffhausen`);
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
   return (
     <form>
       <div className="row">
         <div className="col-4 enter-a-city">
           <input
-            type="text"
+            type="search"
             className="form-control"
             placeholder="Enter a city"
             autoFocus="on"
             autoComplete="off"
+            onChange={updateCity}
           />
         </div>
         <div className="col-1">
