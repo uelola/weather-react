@@ -1,0 +1,66 @@
+.Weather .degree-views {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  text-align: right;
+}
+.Weather .fahrenheit,
+.Weather .celsius {
+  position: relative;
+  color: #555555;
+  text-decoration: none;
+  cursor: default;
+}
+.Weather .fahrenheit:hover,
+.Weather .celsius:hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.Weather .degree-views .active {
+  position: relative;
+  color: black;
+  opacity: 0.8;
+  cursor: default;
+  text-decoration: none;
+  font-weight: 700;
+}
+.Weather .degree-views .active:hover {
+  position: relative;
+  text-decoration: none;
+}
+.Weather .humidity-wind {
+  position: relative;
+  font-size: 12px;
+  list-style: none;
+  padding: 5px 0;
+  opacity: 0.7;
+}
+.Weather .temp-main {
+  position: relative;
+  text-align: right;
+  display: inline-block;
+}
+.Weather .sunrise-sunset {
+  position: relative;
+  font-size: 10px;
+  list-style: none;
+  text-align: right;
+  opacity: 0.8;
+  padding: 5px 0;
+}
+.Weather .precipitation-description {
+  position: relative;
+  margin-left: 15px;
+}
+.Weather .precipitation-description::first-letter {
+  position: relative;
+  text-transform: capitalize;
+}
+.Weather .weather-icon-main {
+  position: relative;
+  width: 55px;
+  display: block;
+  margin: -8px auto;
+}
