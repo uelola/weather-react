@@ -15,8 +15,8 @@ export default function CityForm() {
             type="search"
             className="form-control"
             placeholder="Enter a city"
-            autoFocus="on"
             autoComplete="off"
+            autoFocus="on"
             onChange={updateCity}
           />
         </div>

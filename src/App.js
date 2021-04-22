@@ -17,16 +17,16 @@ function App() {
           <Weather />
         </div>
       </div>
-      <small>
+      <footer>
         <a
           href="https://github.com/uelola/weather-react"
           rel="noreferrer"
           target="_blank"
         >
           Open-source code
-        </a>
-        , by Lola Ueda
-      </small>
+        </a>{" "}
+        by Lola Ueda
+      </footer>
     </div>
   );
 }
