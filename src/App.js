@@ -4,7 +4,6 @@ import "./index";
 
 import "./CityForm";
 import CityForm from "./CityForm";
-import DayAndTime from "./DayAndTime";
 import Weather from "./Weather";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       <div className="weather-app-wrapper">
         <div className="weather-app">
           <CityForm defaultCity="Schaffhausen" />
-          <DayAndTime />
           <Weather defaultCity="Schaffhausen" />
         </div>
       </div>

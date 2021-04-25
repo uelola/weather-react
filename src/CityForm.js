@@ -24,7 +24,7 @@ export default function CityForm(props) {
           <input type="submit" className="search" value="Search" />
         </div>
         <div className="col-7">
-          <h4 className="city-and-country">{props.defaultCity}</h4>
+          <h4 className="city-and-country">{city}</h4>
         </div>
       </div>
     </form>

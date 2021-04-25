@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import DayAndTime from "./DayAndTime";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -9,6 +10,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed * 3.6),
@@ -20,48 +22,51 @@ export default function Weather(props) {
   }
   if (weatherData.ready) {
     return (
-      <div className="row Weather">
-        <div className="col-2">
-          <img
-            src={weatherData.iconUrl}
-            className="weather-icon-main"
-            alt={weatherData.description}
-          />
-        </div>
-        <div className="col-1">
-          <h1 className="temp-main">{weatherData.temperature} </h1>
-        </div>
-        <div className="col-2">
-          <span className="degree-views">
-            <a href="/" className="celsius active">
-              °C
-            </a>
-            |
-            <a href="/" className="fahrenheit">
-              °F
-            </a>
-          </span>
-        </div>
-        <div className="col-4">
-          <ul className="humidity-wind">
-            <li>Humidity {weatherData.humidity} %</li>
-            <li>Wind {weatherData.wind} km/h</li>
-          </ul>
-        </div>
-        <div className="col-3">
-          <ul className="sunrise-sunset">
-            <li>
-              Sunrise <small>{weatherData.sunrise}</small>
-            </li>
-            <li>
-              Sunset <small>{weatherData.sunset}</small>
-            </li>
-          </ul>
-        </div>
-        <div className="col-12">
-          <h6 className="precipitation-description">
-            {weatherData.description}
-          </h6>
+      <div>
+        <DayAndTime date={weatherData.date} />
+        <div className="row Weather">
+          <div className="col-2">
+            <img
+              src={weatherData.iconUrl}
+              className="weather-icon-main"
+              alt={weatherData.description}
+            />
+          </div>
+          <div className="col-1">
+            <h1 className="temp-main">{weatherData.temperature} </h1>
+          </div>
+          <div className="col-2">
+            <span className="degree-views">
+              <a href="/" className="celsius active">
+                °C
+              </a>
+              |
+              <a href="/" className="fahrenheit">
+                °F
+              </a>
+            </span>
+          </div>
+          <div className="col-4">
+            <ul className="humidity-wind">
+              <li>Humidity {weatherData.humidity} %</li>
+              <li>Wind {weatherData.wind} km/h</li>
+            </ul>
+          </div>
+          <div className="col-3">
+            <ul className="sunrise-sunset">
+              <li>
+                Sunrise <small>{weatherData.sunrise}</small>
+              </li>
+              <li>
+                Sunset <small>{weatherData.sunset}</small>
+              </li>
+            </ul>
+          </div>
+          <div className="col-12">
+            <h6 className="precipitation-description">
+              {weatherData.description}
+            </h6>
+          </div>
         </div>
       </div>
     );
