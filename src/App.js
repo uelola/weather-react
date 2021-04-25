@@ -2,8 +2,6 @@ import React from "react";
 import "./App.css";
 import "./index";
 
-import "./CityForm";
-import CityForm from "./CityForm";
 import Weather from "./Weather";
 
 function App() {
@@ -11,7 +9,6 @@ function App() {
     <div className="App">
       <div className="weather-app-wrapper">
         <div className="weather-app">
-          <CityForm defaultCity="Schaffhausen" />
           <Weather defaultCity="Schaffhausen" />
         </div>
       </div>
