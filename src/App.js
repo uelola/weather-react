@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <div className="weather-app-wrapper">
         <div className="weather-app">
-          <CityForm />
+          <CityForm defaultCity="Schaffhausen" />
           <DayAndTime />
-          <Weather />
+          <Weather defaultCity="Schaffhausen" />
         </div>
       </div>
       <footer>

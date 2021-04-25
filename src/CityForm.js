@@ -2,8 +2,8 @@ import React, { useState } from "react";
 //import axios from "axios";
 import "./CityForm.css";
 
-export default function CityForm() {
-  let [city, setCity] = useState(`Schaffhausen`);
+export default function CityForm(props) {
+  let [city, setCity] = useState(props.defaultCity);
   function updateCity(event) {
     setCity(event.target.value);
   }
@@ -24,7 +24,7 @@ export default function CityForm() {
           <input type="submit" className="search" value="Search" />
         </div>
         <div className="col-7">
-          <h4 className="city-and-country">{city}</h4>
+          <h4 className="city-and-country">{props.defaultCity}</h4>
         </div>
       </div>
     </form>
