@@ -33,37 +33,35 @@
   text-transform: capitalize;
 }
 
-.Weather .degree-views {
+.WeatherTemperature .degree-views {
   position: relative;
   margin-top: 5px;
   margin-left: 5px;
   display: inline-block;
   text-align: right;
+  text-decoration: none;
 }
-.Weather .fahrenheit,
-.Weather .celsius {
+.WeatherTemperature .fahrenheit,
+.WeatherTemperature .celsius {
   position: relative;
   color: #555555;
   text-decoration: none;
   cursor: default;
 }
-.Weather .fahrenheit:hover,
-.Weather .celsius:hover {
+.WeatherTemperature .fahrenheit:hover,
+.WeatherTemperature .celsius:hover {
   position: relative;
   text-decoration: none;
 }
 
-.Weather .degree-views .active {
+.WeatherTemperature .degree-views {
   position: relative;
   color: black;
   opacity: 0.8;
   cursor: default;
   text-decoration: none;
   font-weight: 700;
-}
-.Weather .degree-views .active:hover {
-  position: relative;
-  text-decoration: none;
+  top: -16px;
 }
 .Weather .humidity-wind {
   position: relative;
@@ -76,6 +74,11 @@
   position: relative;
   text-align: right;
   display: inline-block;
+}
+.Weather canvas {
+  position: relative;
+  display: inline-block;
+  margin: 5px 35px 15px;
 }
 .Weather .sunrise-sunset {
   position: relative;
@@ -92,9 +95,4 @@
 .Weather .precipitation-description::first-letter {
   position: relative;
   text-transform: capitalize;
-}
-.Weather canvas {
-  position: relative;
-  display: inline-block;
-  margin: 5px 35px 10px;
 }

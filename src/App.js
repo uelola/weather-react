@@ -18,9 +18,17 @@ function App() {
           rel="noreferrer"
           target="_blank"
         >
-          Open-source code
+          Open-source code on GitHub
         </a>{" "}
-        by Lola Ueda
+        by Lola Ueda and
+        <a
+          href="https://infallible-noether-b05338.netlify.app"
+          rel="noreferrer"
+          target="_blank"
+        >
+          {" "}
+          hosted on Netlify
+        </a>
       </footer>
     </div>
   );

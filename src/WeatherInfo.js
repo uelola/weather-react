@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -10,19 +11,8 @@ export default function WeatherInfo(props) {
             <WeatherIcon code={props.data.icon} />
           </div>
         </div>
-        <div className="col-1">
-          <h1 className="temp-main">{props.data.temperature} </h1>
-        </div>
-        <div className="col-2">
-          <span className="degree-views">
-            <a href="/" className="celsius active">
-              °C
-            </a>
-            |
-            <a href="/" className="fahrenheit">
-              °F
-            </a>
-          </span>
+        <div className="col-4">
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
         <div className="col-4">
           <ul className="humidity-wind">
@@ -30,7 +20,7 @@ export default function WeatherInfo(props) {
             <li>Wind {props.data.wind} km/h</li>
           </ul>
         </div>
-        <div className="col-3">
+        <div className="col-2">
           <ul className="sunrise-sunset">
             <li>
               Sunrise <small>{props.data.sunrise}</small>
