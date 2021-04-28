@@ -93,9 +93,8 @@
   position: relative;
   text-transform: capitalize;
 }
-.Weather .weather-icon-main {
+.Weather canvas {
   position: relative;
-  width: 60px;
-  display: block;
-  margin: -8px auto;
+  display: inline-block;
+  margin: 5px 35px 10px;
 }
