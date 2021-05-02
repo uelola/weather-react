@@ -3,21 +3,21 @@
 }
 .form-control:focus {
   position: relative;
-  border: 1px solid #c0c4c3;
-  box-shadow: 0 0 10px #a2a4a5;
+  border: 1px solid #03a9f4;
+  box-shadow: 0 0 10px #08b1ff;
   border-radius: 3px;
 }
 .search {
   position: relative;
   padding: 5px 10px 5px;
-  background-color: #22c8e5;
+  background-color: #08b1ff;
   border: 1px solid #04acca;
   border-radius: 3px;
   transition: all 300ms ease-in-out;
 }
 .search:hover {
   position: relative;
-  border: 1px solid #00bcd4;
+  border: 1px solid #08b1ff;
   background-color: #03a9f4;
   box-shadow: 0 0 5px #c0edea;
   border-radius: 3px;
