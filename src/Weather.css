@@ -32,17 +32,8 @@
   position: relative;
   text-transform: capitalize;
 }
-
-.WeatherTemperature .degree-views {
-  position: relative;
-  margin-top: 5px;
-  margin-left: 5px;
-  display: inline-block;
-  text-align: right;
-}
 .WeatherTemperature .fahrenheit,
 .WeatherTemperature .celsius {
-  position: relative;
   color: #555555;
   text-decoration: none;
   cursor: default;
@@ -58,12 +49,13 @@
   color: black;
   opacity: 0.8;
   cursor: default;
+  display: inline-block;
+  margin-top: 7px;
+  margin-left: 15px;
+  text-align: right;
   text-decoration: none;
   font-weight: 700;
   top: -16px;
-}
-.WeatherTemperature .degree-views {
-  position: relative;
   text-decoration: none;
 }
 .Weather .humidity-wind {
@@ -91,11 +83,8 @@
   opacity: 0.8;
   padding: 5px 0;
 }
-.Weather .precipitation-description {
+.Weather .text-capitalize {
   position: relative;
   margin-left: 15px;
-}
-.Weather .precipitation-description::first-letter {
-  position: relative;
-  text-transform: capitalize;
+  margin-bottom: 25px;
 }

@@ -15,7 +15,7 @@ function App() {
       <footer>
         <a
           href="https://github.com/uelola/weather-react"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Open-source code on GitHub
@@ -23,7 +23,7 @@ function App() {
         by Lola Ueda and
         <a
           href="https://infallible-noether-b05338.netlify.app"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           {" "}

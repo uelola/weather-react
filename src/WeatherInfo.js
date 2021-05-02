@@ -31,9 +31,7 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
         <div className="col-12">
-          <h6 className="precipitation-description">
-            {props.data.description}
-          </h6>
+          <h6 className="text-capitalize">{props.data.description}</h6>
         </div>
       </div>
     </div>
